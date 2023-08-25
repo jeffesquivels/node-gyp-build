@@ -16,7 +16,7 @@ if (!buildFromSource()) {
 }
 
 function build () {
-  var args = [os.platform() === 'win32' ? 'node-gyp.cmd' : 'node-gyp', 'rebuild']
+  var args = [os.platform() === 'win32' ? 'npm.cmd' : 'npm', 'exec', '-c', 'node-gyp rebuild']
 
   try {
     var pkg = require('node-gyp/package.json')
